@@ -31,7 +31,7 @@
   "color": "#ECECEC",
   "icon": "yen",
   "unpublishedAppLayout": {
-    "type": "FLUID"
+    "type": "DESKTOP"
   },
   "publishedAppLayout": {
     "type": "FLUID"
