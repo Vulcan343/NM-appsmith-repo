@@ -30,6 +30,9 @@
   "unreadCommentThreads": 0,
   "color": "#ECECEC",
   "icon": "yen",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
   "unpublishedCustomJSLibs": [],
   "publishedCustomJSLibs": [],
   "evaluationVersion": 2,

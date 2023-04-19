@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 430,
+          "bottomRow": 480,
           "containerStyle": "none",
           "snapRows": 57,
           "parentRowSpace": 1,
@@ -28,15 +28,15 @@
             {
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "borderColor": "#E0DEDE",
-              "widgetName": "Form2",
+              "widgetName": "SearchProdID",
               "isCanvas": true,
               "displayName": "Form",
               "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
               "searchTags": [
                 "group"
               ],
-              "topRow": 6,
-              "bottomRow": 43,
+              "topRow": 11,
+              "bottomRow": 33,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
@@ -57,7 +57,7 @@
                   "widgetName": "Canvas2",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 370,
+                  "bottomRow": 220,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -132,12 +132,12 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 31,
-                      "bottomRow": 35,
+                      "topRow": 16,
+                      "bottomRow": 20,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
-                      "leftColumn": 46,
+                      "leftColumn": 45,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -150,7 +150,7 @@
                       "isDisabled": false,
                       "key": "rctnyl2tjt",
                       "isDeprecated": false,
-                      "rightColumn": 62,
+                      "rightColumn": 61,
                       "isDefaultClickDisabled": true,
                       "widgetId": "tf9kypp5oh",
                       "minWidth": 120,
@@ -179,12 +179,12 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 31,
-                      "bottomRow": 35,
+                      "topRow": 16,
+                      "bottomRow": 20,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
-                      "leftColumn": 30,
+                      "leftColumn": 29,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -197,7 +197,7 @@
                       "isDisabled": false,
                       "key": "rctnyl2tjt",
                       "isDeprecated": false,
-                      "rightColumn": 46,
+                      "rightColumn": 45,
                       "isDefaultClickDisabled": true,
                       "widgetId": "vz82kydtcm",
                       "minWidth": 120,
@@ -305,10 +305,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 6,
+              "originalTopRow": 11,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 43,
+              "originalBottomRow": 33,
               "minDynamicHeight": 10
             },
             {
@@ -316,7 +316,7 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": true,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 6,
+              "topRow": 11,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -392,7 +392,7 @@
               "defaultSelectedRowIndices": [
                 0
               ],
-              "widgetName": "Table1",
+              "widgetName": "AllProducts",
               "defaultPageSize": 0,
               "columnOrder": [
                 "step",
@@ -402,7 +402,7 @@
               ],
               "dynamicPropertyPathList": [],
               "displayName": "Table",
-              "bottomRow": 43,
+              "bottomRow": 48,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
@@ -430,7 +430,7 @@
                   "isCellEditable": false,
                   "isDerived": false,
                   "label": "step",
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"step\"]))}}",
+                  "computedValue": "{{AllProducts.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"step\"]))}}",
                   "validation": {},
                   "sticky": "",
                   "labelColor": "#FFFFFF"
@@ -452,7 +452,7 @@
                   "isCellEditable": false,
                   "isDerived": false,
                   "label": "task",
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"task\"]))}}",
+                  "computedValue": "{{AllProducts.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"task\"]))}}",
                   "validation": {},
                   "sticky": "",
                   "labelColor": "#FFFFFF"
@@ -474,7 +474,7 @@
                   "isCellEditable": false,
                   "isDerived": false,
                   "label": "status",
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
+                  "computedValue": "{{AllProducts.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
                   "validation": {},
                   "sticky": "",
                   "labelColor": "#FFFFFF"
@@ -498,19 +498,19 @@
                   "isDerived": false,
                   "label": "action",
                   "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"action\"]))}}",
+                  "computedValue": "{{AllProducts.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"action\"]))}}",
                   "validation": {},
                   "sticky": "",
                   "labelColor": "#FFFFFF",
-                  "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                  "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                  "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}"
+                  "buttonColor": "{{AllProducts.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
+                  "borderRadius": "{{AllProducts.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                  "boxShadow": "{{AllProducts.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}"
                 }
               },
               "key": "7j926p5eu5",
               "canFreezeColumn": true,
               "isDeprecated": false,
-              "rightColumn": 34,
+              "rightColumn": 35,
               "textSize": "0.875rem",
               "widgetId": "nt6p5mx2vg",
               "minWidth": 450,
@@ -543,6 +543,60 @@
               "responsiveBehavior": "fill",
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
+            },
+            {
+              "widgetName": "Text3",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+              "searchTags": [
+                "typography",
+                "paragraph",
+                "label"
+              ],
+              "topRow": 7,
+              "bottomRow": 11,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "parentColumnSpace": 15.0625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 2,
+              "dynamicBindingPathList": [
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "text": "Products",
+              "key": "iqvlqead4u",
+              "isDeprecated": false,
+              "rightColumn": 18,
+              "textAlign": "LEFT",
+              "dynamicHeight": "AUTO_HEIGHT",
+              "widgetId": "ef18w3zs8t",
+              "minWidth": 450,
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "responsiveBehavior": "fill",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "fontSize": "1.25rem",
+              "minDynamicHeight": 4
             }
           ]
         },
