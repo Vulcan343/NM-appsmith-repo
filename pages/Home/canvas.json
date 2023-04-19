@@ -27,7 +27,7 @@
           "children": [
             {
               "boxShadow": "none",
-              "widgetName": "ButtonGroup1",
+              "widgetName": "Nav_Bar",
               "isCanvas": false,
               "displayName": "Button Group",
               "iconSVG": "/static/media/icon.d6773218cfb61dcfa5f460d43371e30d.svg",
