@@ -2,7 +2,7 @@
   "pages": [
     {
       "id": "Customers",
-      "isDefault": true
+      "isDefault": false
     },
     {
       "id": "Products",
@@ -15,6 +15,10 @@
     {
       "id": "Inventory",
       "isDefault": false
+    },
+    {
+      "id": "Home",
+      "isDefault": true
     }
   ],
   "viewMode": false,
