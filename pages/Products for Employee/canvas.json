@@ -563,7 +563,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Delete a Project",
+                      "text": "Delete a Product",
                       "key": "iqvlqead4u",
                       "isDeprecated": false,
                       "rightColumn": 48,
