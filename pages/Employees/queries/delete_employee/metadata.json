@@ -7,7 +7,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/e/yourefired/{{empID_Delete.inputText}}"
+        "url": "web:4000/e/yourefired"
       },
       "invalids": [],
       "messages": [],
@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "",
+      "body": "{{remove_employee.data}}",
       "bodyFormData": [],
       "httpMethod": "DELETE",
       "selfReferencingDataPaths": [],
@@ -45,14 +45,14 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "datasourceUrl"
+        "key": "body"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "empID_Delete.inputText"
+      "remove_employee.data"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
