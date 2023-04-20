@@ -277,7 +277,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "00-6271485",
                       "minDynamicHeight": 4
                     }
                   ],
