@@ -123,9 +123,10 @@
                       "minDynamicHeight": 4
                     },
                     {
-                      "resetFormOnClick": true,
+                      "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button3",
+                      "onClick": "{{get_specific_customer_API.run(() => showAlert('Success'), () => showAlert('No Such Customer','error'))}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -138,6 +139,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 45,
                       "dynamicBindingPathList": [
                         {
@@ -218,7 +224,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Input5",
+                      "widgetName": "customerID1",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                       "searchTags": [
@@ -721,27 +727,6 @@
                       "animateLoading": true,
                       "dynamicBindingPathList": [
                         {
-                          "key": "primaryColumns.step.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.task.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.status.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.action.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.action.buttonColor"
-                        },
-                        {
-                          "key": "primaryColumns.action.borderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.action.boxShadow"
-                        },
-                        {
                           "key": "accentColor"
                         },
                         {
@@ -749,6 +734,42 @@
                         },
                         {
                           "key": "boxShadow"
+                        },
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.city.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.customer_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.email.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.first_name.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.last_name.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.payment_info.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.phone_num.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.primary_store_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.state.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.street_address.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.zipcode.computedValue"
                         }
                       ],
                       "needsHeightForContent": true,
@@ -786,19 +807,30 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "columnUpdatedAt": 1681916652119,
+                      "columnUpdatedAt": 1681963757084,
                       "defaultSelectedRowIndices": [
                         0
                       ],
                       "widgetName": "specific_employee",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "step",
-                        "task",
-                        "status",
-                        "action"
+                        "city",
+                        "customer_id",
+                        "email",
+                        "first_name",
+                        "last_name",
+                        "payment_info",
+                        "phone_num",
+                        "primary_store_id",
+                        "state",
+                        "street_address",
+                        "zipcode"
                       ],
-                      "dynamicPropertyPathList": [],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "tableData"
+                        }
+                      ],
                       "displayName": "Table",
                       "bottomRow": 29,
                       "columnWidthMap": {
@@ -809,100 +841,327 @@
                       "parentRowSpace": 10,
                       "hideCard": false,
                       "parentColumnSpace": 4.9609375,
+                      "dynamicTriggerPathList": [],
                       "borderWidth": "1",
                       "primaryColumns": {
-                        "step": {
+                        "city": {
+                          "allowCellWrapping": false,
                           "index": 0,
                           "width": 150,
-                          "id": "step",
-                          "originalId": "step",
-                          "alias": "step",
+                          "originalId": "city",
+                          "id": "city",
+                          "alias": "city",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
+                          "textColor": "",
                           "textSize": "0.875rem",
+                          "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
-                          "isCellVisible": true,
+                          "isDisabled": false,
                           "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
                           "isDerived": false,
-                          "label": "step",
-                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"step\"]))}}",
-                          "validation": {},
+                          "label": "city",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"city\"]))}}",
                           "sticky": "",
-                          "labelColor": "#FFFFFF"
+                          "validation": {},
+                          "cellBackground": ""
                         },
-                        "task": {
+                        "customer_id": {
+                          "allowCellWrapping": false,
                           "index": 1,
                           "width": 150,
-                          "id": "task",
-                          "originalId": "task",
-                          "alias": "task",
+                          "originalId": "customer_id",
+                          "id": "customer_id",
+                          "alias": "customer_id",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "number",
+                          "textColor": "",
                           "textSize": "0.875rem",
+                          "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
-                          "isCellVisible": true,
+                          "isDisabled": false,
                           "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
                           "isDerived": false,
-                          "label": "task",
-                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"task\"]))}}",
-                          "validation": {},
+                          "label": "customer_id",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"customer_id\"]))}}",
                           "sticky": "",
-                          "labelColor": "#FFFFFF"
+                          "validation": {},
+                          "cellBackground": ""
                         },
-                        "status": {
+                        "email": {
+                          "allowCellWrapping": false,
                           "index": 2,
                           "width": 150,
-                          "id": "status",
-                          "originalId": "status",
-                          "alias": "status",
+                          "originalId": "email",
+                          "id": "email",
+                          "alias": "email",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
+                          "textColor": "",
                           "textSize": "0.875rem",
+                          "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
-                          "isCellVisible": true,
+                          "isDisabled": false,
                           "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
                           "isDerived": false,
-                          "label": "status",
-                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
-                          "validation": {},
+                          "label": "email",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
                           "sticky": "",
-                          "labelColor": "#FFFFFF"
+                          "validation": {},
+                          "cellBackground": ""
                         },
-                        "action": {
+                        "first_name": {
+                          "allowCellWrapping": false,
                           "index": 3,
                           "width": 150,
-                          "id": "action",
-                          "originalId": "action",
-                          "alias": "action",
+                          "originalId": "first_name",
+                          "id": "first_name",
+                          "alias": "first_name",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "button",
+                          "columnType": "text",
+                          "textColor": "",
                           "textSize": "0.875rem",
+                          "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
-                          "isCellVisible": true,
-                          "isCellEditable": false,
                           "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
                           "isDerived": false,
-                          "label": "action",
-                          "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"action\"]))}}",
-                          "validation": {},
+                          "label": "first_name",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"first_name\"]))}}",
                           "sticky": "",
-                          "labelColor": "#FFFFFF",
-                          "buttonColor": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                          "borderRadius": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "boxShadow": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}"
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "last_name": {
+                          "allowCellWrapping": false,
+                          "index": 4,
+                          "width": 150,
+                          "originalId": "last_name",
+                          "id": "last_name",
+                          "alias": "last_name",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "last_name",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"last_name\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "payment_info": {
+                          "allowCellWrapping": false,
+                          "index": 5,
+                          "width": 150,
+                          "originalId": "payment_info",
+                          "id": "payment_info",
+                          "alias": "payment_info",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "payment_info",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"payment_info\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "phone_num": {
+                          "allowCellWrapping": false,
+                          "index": 6,
+                          "width": 150,
+                          "originalId": "phone_num",
+                          "id": "phone_num",
+                          "alias": "phone_num",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "phone_num",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"phone_num\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "primary_store_id": {
+                          "allowCellWrapping": false,
+                          "index": 7,
+                          "width": 150,
+                          "originalId": "primary_store_id",
+                          "id": "primary_store_id",
+                          "alias": "primary_store_id",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "primary_store_id",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"primary_store_id\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "state": {
+                          "allowCellWrapping": false,
+                          "index": 8,
+                          "width": 150,
+                          "originalId": "state",
+                          "id": "state",
+                          "alias": "state",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "state",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"state\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "street_address": {
+                          "allowCellWrapping": false,
+                          "index": 9,
+                          "width": 150,
+                          "originalId": "street_address",
+                          "id": "street_address",
+                          "alias": "street_address",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "street_address",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"street_address\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "zipcode": {
+                          "allowCellWrapping": false,
+                          "index": 10,
+                          "width": 150,
+                          "originalId": "zipcode",
+                          "id": "zipcode",
+                          "alias": "zipcode",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "zipcode",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{specific_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"zipcode\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
                         }
                       },
                       "key": "vpdief690p",
@@ -912,26 +1171,7 @@
                       "textSize": "0.875rem",
                       "widgetId": "tuhh38cleu",
                       "minWidth": 450,
-                      "tableData": [
-                        {
-                          "step": "#1",
-                          "task": "Drop a table",
-                          "status": "✅",
-                          "action": ""
-                        },
-                        {
-                          "step": "#2",
-                          "task": "Create a query fetch_users with the Mock DB",
-                          "status": "--",
-                          "action": ""
-                        },
-                        {
-                          "step": "#3",
-                          "task": "Bind the query using => fetch_users.data",
-                          "status": "--",
-                          "action": ""
-                        }
-                      ],
+                      "tableData": "{{get_specific_customer_API.data}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "muzwxizx6x",
@@ -1236,6 +1476,16 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customers_get_specific_customer_API",
+              "name": "get_specific_customer_API",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "customerID1.inputText"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]
