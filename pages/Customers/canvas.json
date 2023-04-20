@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 590,
+          "bottomRow": 570,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -37,14 +37,14 @@
                 "group"
               ],
               "topRow": 35,
-              "bottomRow": 59,
+              "bottomRow": 57,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
               "shouldScrollContents": true,
               "animateLoading": true,
               "parentColumnSpace": 15.0625,
-              "leftColumn": 39,
+              "leftColumn": 37,
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
@@ -58,7 +58,7 @@
                   "widgetName": "Canvas2Copy",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 240,
+                  "bottomRow": 220,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -78,7 +78,7 @@
                         "label"
                       ],
                       "topRow": 1,
-                      "bottomRow": 7,
+                      "bottomRow": 5,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -133,8 +133,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 18,
-                      "bottomRow": 22,
+                      "topRow": 16,
+                      "bottomRow": 20,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -180,8 +180,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 18,
-                      "bottomRow": 22,
+                      "topRow": 16,
+                      "bottomRow": 20,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -227,8 +227,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 9,
-                      "bottomRow": 16,
+                      "topRow": 7,
+                      "bottomRow": 14,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -311,7 +311,7 @@
               "originalTopRow": 35,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 59,
+              "originalBottomRow": 57,
               "minDynamicHeight": 10
             },
             {
@@ -649,7 +649,7 @@
               "shouldScrollContents": true,
               "animateLoading": true,
               "parentColumnSpace": 14.0625,
-              "leftColumn": 39,
+              "leftColumn": 37,
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
@@ -1187,7 +1187,7 @@
               "originalTopRow": 38,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 56,
+              "originalBottomRow": 54,
               "minDynamicHeight": 10
             }
           ]
