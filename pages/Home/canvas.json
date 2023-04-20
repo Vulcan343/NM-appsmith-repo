@@ -54,7 +54,7 @@
                   "onClick": "{{navigateTo('Customers', {}, 'SAME_WINDOW')}}"
                 },
                 "groupButton2": {
-                  "label": "Products",
+                  "label": "Customer Products",
                   "iconName": "page-layout",
                   "id": "groupButton2",
                   "buttonType": "SIMPLE",
@@ -65,7 +65,20 @@
                   "index": 1,
                   "menuItems": {},
                   "buttonColor": "#3b82f6",
-                  "onClick": "{{navigateTo('Products', {}, 'SAME_WINDOW')}}"
+                  "onClick": "{{navigateTo('Products for Customers', {}, 'SAME_WINDOW')}}"
+                },
+                "groupButtoneedj3898et": {
+                  "id": "groupButtoneedj3898et",
+                  "index": 2,
+                  "label": "Employee Products",
+                  "menuItems": {},
+                  "buttonType": "SIMPLE",
+                  "placement": "CENTER",
+                  "widgetId": "74pjkth7py",
+                  "isDisabled": false,
+                  "isVisible": true,
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "onClick": "{{navigateTo('Products for Employee', {}, 'SAME_WINDOW')}}"
                 },
                 "groupButton3": {
                   "label": "Employees",
@@ -76,7 +89,7 @@
                   "widgetId": "",
                   "isVisible": true,
                   "isDisabled": false,
-                  "index": 2,
+                  "index": 3,
                   "menuItems": {
                     "menuItem1": {
                       "label": "First Option",
@@ -118,7 +131,7 @@
                 },
                 "groupButtongh3ifmnu6u": {
                   "id": "groupButtongh3ifmnu6u",
-                  "index": 3,
+                  "index": 4,
                   "label": "Inventory",
                   "menuItems": {},
                   "buttonType": "SIMPLE",
@@ -147,6 +160,9 @@
                 },
                 {
                   "key": "groupButtons.groupButtongh3ifmnu6u.onClick"
+                },
+                {
+                  "key": "groupButtons.groupButtoneedj3898et.onClick"
                 }
               ],
               "leftColumn": 9,
@@ -156,6 +172,9 @@
                 },
                 {
                   "key": "groupButtons.groupButtongh3ifmnu6u.buttonColor"
+                },
+                {
+                  "key": "groupButtons.groupButtoneedj3898et.buttonColor"
                 }
               ],
               "key": "u6jjdzuy6k",
