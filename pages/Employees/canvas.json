@@ -414,9 +414,10 @@
                       "minDynamicHeight": 4
                     },
                     {
-                      "resetFormOnClick": true,
+                      "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button1CopyCopy1",
+                      "onClick": "{{delete_employee.run(() => showAlert('sucess','success'), () => showAlert('no such ID','error'))}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -429,6 +430,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 45,
                       "dynamicBindingPathList": [
                         {
@@ -509,7 +515,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Input1CopyCopy1",
+                      "widgetName": "empID_Delete",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                       "searchTags": [
@@ -528,7 +534,7 @@
                       "animateLoading": true,
                       "parentColumnSpace": 6.4140625,
                       "dynamicTriggerPathList": [],
-                      "resetOnSubmit": true,
+                      "resetOnSubmit": false,
                       "leftColumn": 2,
                       "dynamicBindingPathList": [
                         {
@@ -1898,9 +1904,10 @@
                       "minDynamicHeight": 4
                     },
                     {
-                      "resetFormOnClick": true,
+                      "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button1",
+                      "onClick": "{{post_new_employee_API.run(() => showAlert('Success'), () => showAlert('DuplicateID'))}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -1913,6 +1920,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 46,
                       "dynamicBindingPathList": [
                         {
