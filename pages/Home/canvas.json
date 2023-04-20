@@ -54,7 +54,7 @@
                   "onClick": "{{navigateTo('Customers', {}, 'SAME_WINDOW')}}"
                 },
                 "groupButton2": {
-                  "label": "Customer Products",
+                  "label": "Products for Customers",
                   "iconName": "page-layout",
                   "id": "groupButton2",
                   "buttonType": "SIMPLE",
@@ -70,15 +70,16 @@
                 "groupButtoneedj3898et": {
                   "id": "groupButtoneedj3898et",
                   "index": 2,
-                  "label": "Employee Products",
+                  "label": "Products for Employees",
                   "menuItems": {},
                   "buttonType": "SIMPLE",
                   "placement": "CENTER",
                   "widgetId": "74pjkth7py",
                   "isDisabled": false,
                   "isVisible": true,
-                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-                  "onClick": "{{navigateTo('Products for Employee', {}, 'SAME_WINDOW')}}"
+                  "buttonColor": "#ec4899",
+                  "onClick": "{{navigateTo('Products for Employee', {}, 'SAME_WINDOW')}}",
+                  "iconName": "page-layout"
                 },
                 "groupButton3": {
                   "label": "Employees",
@@ -165,22 +166,19 @@
                   "key": "groupButtons.groupButtoneedj3898et.onClick"
                 }
               ],
-              "leftColumn": 9,
+              "leftColumn": 6,
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
                 },
                 {
                   "key": "groupButtons.groupButtongh3ifmnu6u.buttonColor"
-                },
-                {
-                  "key": "groupButtons.groupButtoneedj3898et.buttonColor"
                 }
               ],
               "key": "u6jjdzuy6k",
               "orientation": "horizontal",
               "isDeprecated": false,
-              "rightColumn": 46,
+              "rightColumn": 47,
               "widgetId": "mejw8r26mu",
               "minWidth": 450,
               "isVisible": true,
@@ -218,7 +216,7 @@
               "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
               "parentColumnSpace": 15.0625,
               "dynamicTriggerPathList": [],
-              "leftColumn": 16,
+              "leftColumn": 6,
               "dynamicBindingPathList": [
                 {
                   "key": "truncateButtonColor"
@@ -232,7 +230,7 @@
               ],
               "shouldTruncate": false,
               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-              "text": "Moooooooo",
+              "text": "Welcome to the Non-Dairy Barn!",
               "key": "iqvlqead4u",
               "isDeprecated": false,
               "rightColumn": 51,
