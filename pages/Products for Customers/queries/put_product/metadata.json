@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "post_new_product",
+    "name": "put_product",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/p/postproducts/try"
+        "url": "web:4000/p/products/update/{{ProductID3.inputText}}"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Products for Employee",
+    "pageId": "Products for Customers",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -29,9 +29,9 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{AddProduct.data}}",
+      "body": "{{UpdateProd.data}}",
       "bodyFormData": [],
-      "httpMethod": "POST",
+      "httpMethod": "PUT",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -45,6 +45,9 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
+        "key": "datasourceUrl"
+      },
+      {
         "key": "body"
       }
     ],
@@ -52,14 +55,15 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "AddProduct.data"
+      "ProductID3.inputText",
+      "UpdateProd.data"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Products for Employee_post_new_product",
+  "id": "Products for Customers_put_product",
   "deleted": false,
-  "gitSyncId": "6441363b7ec8b457f9b921f3_6441365d7ec8b457f9b9220a"
+  "gitSyncId": "6441363b7ec8b457f9b921f3_64414b05e36de426334dff24"
 }

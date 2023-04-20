@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "post_new_product",
+    "name": "post_new_employee_API",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/p/postproducts/try"
+        "url": "web:4000/e/employee/newhire"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Products for Employee",
+    "pageId": "Employees",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{AddProduct.data}}",
+      "body": "{{post_employee.data}}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
@@ -52,14 +52,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "AddProduct.data"
+      "post_employee.data"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Products for Employee_post_new_product",
+  "id": "Employees_post_new_employee_API",
   "deleted": false,
-  "gitSyncId": "6441363b7ec8b457f9b921f3_6441365d7ec8b457f9b9220a"
+  "gitSyncId": "6441363b7ec8b457f9b921f3_644144fce36de426334dff1b"
 }
