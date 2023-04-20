@@ -7,7 +7,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "wbe:4000/p/postproducts"
+        "url": "wbe:4000/p/postproducts/try"
       },
       "invalids": [],
       "messages": [],
